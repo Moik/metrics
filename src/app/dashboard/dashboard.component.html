@@ -1,0 +1,3 @@
+<app-pulse-chart [pulseMetrics]="pulseMetrics | async" (selectMetrics)="selectMetrics($event)"></app-pulse-chart>
+
+<app-pulse-form [selectedMetrics]="selectedMetrics" (savePulseMetrics)="savePulseMetrics($event)"></app-pulse-form>

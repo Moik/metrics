@@ -1,0 +1,8 @@
+<p-card header="Pulse Data" styleClass="chart-card">
+  <p-chart
+    *ngIf="chartData"
+    type="line"
+    [data]="chartData"
+    [options]="options"
+    (onDataSelect)="onDataSelect($event)"></p-chart>
+</p-card>

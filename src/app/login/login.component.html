@@ -1,0 +1,22 @@
+<form [formGroup]="form">
+  <p-card header="Login">
+    <div class="p-inputgroup" style="margin-bottom: 1rem">
+      <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+      <input type="text" pInputText placeholder="Username" formControlName="email" />
+    </div>
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon"><i class="pi pi-wrench"></i></span>
+      <input type="password" pInputText placeholder="Password" formControlName="password" />
+    </div>
+
+    <ng-template pTemplate="footer">
+      <button
+        pButton
+        type="submit"
+        label="Login"
+        class="p-button-sm"
+        [disabled]="!form.valid"
+        (click)="login()"></button>
+    </ng-template>
+  </p-card>
+</form>

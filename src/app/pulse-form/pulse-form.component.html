@@ -1,0 +1,38 @@
+<form [formGroup]="form">
+  <p-card header="Update Pulse Metrics">
+    <div class="control-item">
+      <label for="minPulse">Min Pulse</label>
+      <p-inputNumber inputId="minPulse" formControlName="minPulse"></p-inputNumber>
+    </div>
+
+    <div class="control-item">
+      <label for="restPulse">Rest Pulse</label>
+      <p-inputNumber inputId="restPulse" formControlName="restPulse"></p-inputNumber>
+    </div>
+
+    <div class="control-item">
+      <label for="averagePulse">Average Pulse</label>
+      <p-inputNumber inputId="averagePulse" formControlName="averagePulse"></p-inputNumber>
+    </div>
+
+    <div class="control-item">
+      <label for="maxPulse">Max Pulse</label>
+      <p-inputNumber inputId="maxPulse" formControlName="maxPulse"></p-inputNumber>
+    </div>
+
+    <div class="control-item">
+      <label for="date">Date</label>
+      <p-calendar inputId="date" formControlName="date"></p-calendar>
+    </div>
+
+    <ng-template pTemplate="footer">
+      <button
+        pButton
+        type="submit"
+        label="Save"
+        class="p-button-sm"
+        [disabled]="!form.valid"
+        (click)="submit()"></button>
+    </ng-template>
+  </p-card>
+</form>
